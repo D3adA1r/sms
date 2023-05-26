@@ -7,9 +7,9 @@ import java.awt.event.ActionListener;
 
 public class VRD extends JPanel {
 
-    private JButton off;
-    private JLabel size;
-    private JCheckBox remove;
+    protected JButton off;
+    protected JLabel size;
+    protected JCheckBox remove;
     protected int number;
     private JCheckBox checkBox;
     public VRD() {

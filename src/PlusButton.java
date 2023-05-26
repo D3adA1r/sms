@@ -6,19 +6,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PlusButton extends JButton {
-    CenterPanel centerPanel;
+    protected CenterPanel centerPanel;
+    protected PracaBSC praca;
     public PlusButton(CenterPanel centerPanel) {
         this.centerPanel=centerPanel;
+        praca=new PracaBSC();
         this.setText("+");
         this.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                centerPanel.bscLogic=new BSCLogic();
-                centerPanel.bscVisual=new BSCVisual(centerPanel.bscLogic);
-                centerPanel.dodatPanel.add(centerPanel.bscVisual,BoxLayout.X_AXIS);
-
+                centerPanel.dodatPanel.add(praca.create());
                 revalidate();
             }
         });
+
+
     }
+
 }

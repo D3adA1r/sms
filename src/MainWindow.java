@@ -9,6 +9,7 @@ public class MainWindow extends JFrame {
     private RightPanel rightPanel;
     private JScrollPane scrollPane;
     public MainWindow() throws HeadlessException {
+        this.setTitle("SMSApp");
         setLayout(new BorderLayout());
         leftPanel=new LeftPanel();
         centerPanel=new CenterPanel();          //Inicjalizacja paneli

@@ -5,10 +5,7 @@ import java.awt.*;
 
 public class BSCVisual extends JPanel {
     public BSCVisual(BSCLogic logic) {
-        this.setBackground(new Color(
-                (int)(Math.random()*255),
-                (int)(Math.random()*255),
-        (int)(Math.random()*255)));
+        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.setPreferredSize(new Dimension(200,600));
     }
 }

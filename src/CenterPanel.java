@@ -2,6 +2,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 import javax.swing.*;
 
 public class CenterPanel extends JPanel {
@@ -11,8 +12,8 @@ public class CenterPanel extends JPanel {
     protected JPanel dodatPanel;
     protected BTS btsleft;
     protected BTS btsright;
-    BSCLogic bscLogic;
-    BSCVisual bscVisual;
+
+
 
 
     public CenterPanel() {
@@ -27,6 +28,7 @@ public class CenterPanel extends JPanel {
         dodatPanel.setLayout(new BoxLayout(dodatPanel,BoxLayout.X_AXIS));
         //ButtonPanel
         buttonPanel=new JPanel();
+
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(minus);
         buttonPanel.add(plus);
@@ -38,6 +40,7 @@ public class CenterPanel extends JPanel {
 
         this.add(buttonPanel,BorderLayout.SOUTH);
         this.add(dodatPanel);
+
 
 
     }

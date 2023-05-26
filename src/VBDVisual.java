@@ -48,7 +48,7 @@ public class VBDVisual extends JPanel {
 
         String[] stans = {"Active", "Waiting"};
         stan = new JComboBox(stans);
-        stan.setPreferredSize(new Dimension(200, 50));
+        stan.setSize(new Dimension(200, 50));
 
         exit = new JButton("Stop");
         exit.addActionListener(new ActionListener() {
