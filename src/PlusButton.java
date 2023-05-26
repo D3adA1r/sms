@@ -13,9 +13,9 @@ public class PlusButton extends JButton {
         this.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BSCLogic logic=new BSCLogic();
-                BSCVisual visual=new BSCVisual(logic);
-                centerPanel.dodatPanel.add(visual,BoxLayout.X_AXIS);
+                centerPanel.bscLogic=new BSCLogic();
+                centerPanel.bscVisual=new BSCVisual(centerPanel.bscLogic);
+                centerPanel.dodatPanel.add(centerPanel.bscVisual,BoxLayout.X_AXIS);
 
                 revalidate();
             }

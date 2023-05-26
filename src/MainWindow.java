@@ -27,4 +27,12 @@ public class MainWindow extends JFrame {
         this.setSize(1920,1080); // Ustawienia okna MainWindow
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                MainWindow window=new MainWindow();
+            }
+        });
+    }
 }

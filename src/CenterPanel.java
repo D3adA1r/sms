@@ -11,14 +11,16 @@ public class CenterPanel extends JPanel {
     protected JPanel dodatPanel;
     protected BTS btsleft;
     protected BTS btsright;
-    protected BSCVisual bscVisual;
+    BSCLogic bscLogic;
+    BSCVisual bscVisual;
+
 
     public CenterPanel() {
         this.setLayout(new BorderLayout());
         //Plus
         plus = new PlusButton(this);
         //Minus
-        minus = new MinusButton();
+        minus = new MinusButton(this);
 
         //DodatPanel
         dodatPanel=new JPanel();
@@ -28,7 +30,6 @@ public class CenterPanel extends JPanel {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(minus);
         buttonPanel.add(plus);
-
 
         btsleft=new BTS();
         btsright=new BTS();
