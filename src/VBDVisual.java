@@ -9,13 +9,13 @@ import java.awt.event.ActionListener;
 
 
 public class VBDVisual extends JPanel {
-    private VBDLogic vbdLogic;
-    private JTextField numer;
-    private JLabel labelTextField;
-    private JSlider slider;
-    private JLabel sliderLabel;
-    private JComboBox stan;
-    private JButton exit;
+    protected VBDLogic vbdLogic;
+    protected JTextField numer;
+    protected JLabel labelTextField;
+    protected JSlider slider;
+    protected JLabel sliderLabel;
+    protected JComboBox stan;
+    protected JButton exit;
 
     public VBDVisual(VBDLogic vbdLogic) {
         this.vbdLogic = vbdLogic;

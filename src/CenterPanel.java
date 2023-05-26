@@ -1,8 +1,5 @@
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.LinkedList;
 import javax.swing.*;
 
 public class CenterPanel extends JPanel {
@@ -10,8 +7,10 @@ public class CenterPanel extends JPanel {
     protected MinusButton minus;
     protected JPanel buttonPanel;
     protected JPanel dodatPanel;
-    protected BTS btsleft;
-    protected BTS btsright;
+    protected BTSLogic btsLogicLeft;
+    protected BTSLogic btsLogicRight;
+    protected BTSVisual btsleft;
+    protected BTSVisual btsright;
 
 
 
@@ -33,8 +32,11 @@ public class CenterPanel extends JPanel {
         buttonPanel.add(minus);
         buttonPanel.add(plus);
 
-        btsleft=new BTS();
-        btsright=new BTS();
+        btsLogicLeft=new BTSLogic(1);
+        btsLogicRight=new BTSLogic(2);
+
+        btsleft=new BTSVisual(btsLogicLeft);
+        btsright=new BTSVisual(btsLogicRight);
         this.add(btsleft,BorderLayout.WEST);
         this.add(btsright,BorderLayout.EAST);
 

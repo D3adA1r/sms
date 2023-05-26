@@ -5,7 +5,7 @@ public class VRDLogic {
     }
 
     public void setNumber(){
-        number=(int)(Math.random()*1000);
+        number=(int)(Math.random()*100000);
     }
     public String toStringNumber(){
         setNumber();
