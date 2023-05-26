@@ -1,10 +1,11 @@
 
 
 public class VBDLogic {
-    private String message;
-    private boolean status;
-    private int bandwidth;
-    private int number;
+    protected String message;
+    protected boolean status;
+    protected int bandwidth;
+    protected int number;
+    protected int counter;
 
     public VBDLogic(String message) {
         this.message = message;
@@ -23,6 +24,13 @@ public class VBDLogic {
 
     public void setBandwidth(int bandwidth) {
         this.bandwidth = bandwidth;
+    }
+    public void setNumber(){
+        number=(int)(Math.random()*1000);
+    }
+    public String toStringNumber(){
+        setNumber();
+        return String.valueOf(number) ;
     }
 
     public void stop() {

@@ -1,18 +1,14 @@
-
-
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VRD extends JPanel {
-
+public class VRDVisual extends JPanel {
     protected JButton off;
     protected JLabel size;
     protected JCheckBox remove;
-    protected int number;
     private JCheckBox checkBox;
-    public VRD() {
+
+    public VRDVisual(VRDLogic vrdLogic) {
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         size=new JLabel("Size");
 
@@ -28,11 +24,9 @@ public class VRD extends JPanel {
                 revalidate();
             }
         });
+
         this.add(size);
         this.add(checkBox);
         this.add(off);
-
-
-
     }
 }

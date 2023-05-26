@@ -23,7 +23,7 @@ public class VBDVisual extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setVisible(true);
 
-        numer = new JTextField(vbdLogic.getNumber());
+        numer = new JTextField(vbdLogic.toStringNumber());
         numer.setEditable(false);
         numer.setPreferredSize(new Dimension(200, 20));
         numer.setFont(new Font("NumerFont", Font.BOLD, 14));
@@ -69,5 +69,6 @@ public class VBDVisual extends JPanel {
         this.add(slider);
         this.add(stan);
         this.add(exit);
+
     }
 }

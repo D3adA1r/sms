@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class PracaBSC {
+public class PracaBSC  {
     LinkedList<BSCVisual> bscVisualLinkedList;
 
     public PracaBSC() {

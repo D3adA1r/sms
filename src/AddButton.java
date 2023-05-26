@@ -18,6 +18,7 @@ public class AddButton extends JButton {
                 String message = JOptionPane.showInputDialog(this, "");
                 if (message != null && !message.isEmpty()) {
                     VBDLogic vbdLogic = new VBDLogic(message);
+                    vbdLogic.setNumber();
                     VBDVisual vbdVisual = new VBDVisual(vbdLogic);
                     panel.add(vbdVisual);
                     panel.revalidate();

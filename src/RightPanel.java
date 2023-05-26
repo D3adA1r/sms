@@ -32,10 +32,11 @@ public class RightPanel extends JPanel {
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                VRD vrd=new VRD();
+                VRDLogic vrdLogic=new VRDLogic();
+                VRDVisual vrdVisual=new VRDVisual(vrdLogic);
                 Border border = BorderFactory.createLineBorder(Color.BLACK);
-                vrd.setBorder(border);
-                panel.add(vrd);
+                vrdVisual.setBorder(border);
+                panel.add(vrdVisual);
                 revalidate();
             }
         });
