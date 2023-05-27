@@ -6,8 +6,10 @@ public class LeftPanel extends JPanel {
     private AddButton addButton;
     private JScrollPane scrollPanel;
     private JPanel panel;
+    private BTSLogicLeft btsLogicLeft;
 
     public LeftPanel() {
+        this.btsLogicLeft=btsLogicLeft;
         this.setLayout(new BorderLayout());
         this.setBackground(Color.BLUE);
         this.setPreferredSize(new Dimension(230, 600));

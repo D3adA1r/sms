@@ -7,10 +7,10 @@ public class CenterPanel extends JPanel {
     protected MinusButton minus;
     protected JPanel buttonPanel;
     protected JPanel dodatPanel;
-    protected BTSLogic btsLogicLeft;
-    protected BTSLogic btsLogicRight;
-    protected BTSVisual btsleft;
-    protected BTSVisual btsright;
+    protected BTSLogicLeft btsLogicLeft;
+    protected BTSLogicRight btsLogicRight;
+    protected BTSVisualLeft btsleft;
+    protected BTSVisualRight btsright;
 
 
 
@@ -32,11 +32,11 @@ public class CenterPanel extends JPanel {
         buttonPanel.add(minus);
         buttonPanel.add(plus);
 
-        btsLogicLeft=new BTSLogic(1);
-        btsLogicRight=new BTSLogic(2);
+        btsLogicLeft=new BTSLogicLeft();
+        btsLogicRight=new BTSLogicRight();
 
-        btsleft=new BTSVisual(btsLogicLeft);
-        btsright=new BTSVisual(btsLogicRight);
+        btsleft=new BTSVisualLeft(btsLogicLeft);
+        btsright=new BTSVisualRight(btsLogicRight);
         this.add(btsleft,BorderLayout.WEST);
         this.add(btsright,BorderLayout.EAST);
 

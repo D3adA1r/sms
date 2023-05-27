@@ -16,12 +16,12 @@ public class MinusButton extends JButton {
             @Override
             public void actionPerformed(ActionEvent e) {
                Component[] components=centerPanel.dodatPanel.getComponents();
-               if(components.length>0){
-                   Component comp=components[components.length-1];
+               if(components.length>0) {
+                   Component comp = components[components.length - 1];
                    centerPanel.dodatPanel.remove(comp);
-               }
-                revalidate();
+                   revalidate();
 
+               }
             }
         });
     }

@@ -1,14 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class BTSVisual extends JPanel {
+public class BTSVisualRight extends JPanel {
     protected JLabel numberBTS;
     protected JLabel iloscSMSDone;
     protected JLabel iloscSMSWait;
-    public BTSVisual(BTSLogic btsLogic) {
+
+    public BTSVisualRight(BTSLogicRight btsLogicRight) {
         this.setPreferredSize(new Dimension(200,600));
         this.setBorder(BorderFactory.createLineBorder(Color.BLUE));
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+
 
         //Number BTS
         numberBTS=new JLabel("Number..");

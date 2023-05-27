@@ -11,7 +11,10 @@ public class PracaBSC  {
         BSCLogic bscLogic=new BSCLogic();
         BSCVisual bscVisual=new BSCVisual(bscLogic);
         bscVisualLinkedList.add(bscVisual);
+        System.out.println(bscVisualLinkedList.size());
         return bscVisual;
     }
+
+    
 
 }
