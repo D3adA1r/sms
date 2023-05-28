@@ -3,6 +3,9 @@ import java.util.LinkedList;
 public class BTSLogicLeft {
     protected int liczbaDone;
     protected int liczbaWait;
+    String SMSCNumber;
+    String recipientNumber;
+    String message;
     protected VBDLogic vbdLogic;
         protected int numberBTS;
 
@@ -12,11 +15,10 @@ public class BTSLogicLeft {
         sms=new LinkedList<>();
 
     }
-    public void getVBD(VBDLogic vbdLogic){
+    public void codeVBD(VBDLogic vbdLogic){
         this.vbdLogic=vbdLogic;
-        sms.add(this.vbdLogic);
-    }
-    public void codeVBD(){
+        message= vbdLogic.message;
+        System.out.println(message);
 
     }
 }
