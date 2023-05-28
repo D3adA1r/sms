@@ -4,23 +4,22 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainWindow extends JFrame {
-    private LeftPanel leftPanel;
-    private CenterPanel centerPanel;
-    private RightPanel rightPanel;
-    private JScrollPane scrollPane;
+    Main main;
     public MainWindow() throws HeadlessException {
         this.setTitle("SMSApp");
         setLayout(new BorderLayout());
-        leftPanel=new LeftPanel();
-        centerPanel=new CenterPanel();          //Inicjalizacja paneli
-        rightPanel=new RightPanel();
-        scrollPane=new JScrollPane();
-        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        main=new Main();
+        this.add(main.leftPanel);
+        this.add(main.centerPanel);
+        this.add(main.rightPanel);
+        main.leftPanel.add(main.addButton,BorderLayout.SOUTH);
+        main.leftPanel.add(main.scrollPane);
+        main.addButton.setPreferredSize(new Dimension(200, 50));
+        main.scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        this.getContentPane().add(leftPanel, BorderLayout.WEST);
-        this.getContentPane().add(rightPanel,BorderLayout.EAST); // Dodanie paneli z ustawieniem BorderLayout
-        this.getContentPane().add(centerPanel,BorderLayout.CENTER);
-
+        this.getContentPane().add(main.leftPanel, BorderLayout.WEST);
+        this.getContentPane().add(main.rightPanel,BorderLayout.EAST); // Dodanie paneli z ustawieniem BorderLayout
+        this.getContentPane().add(main.centerPanel,BorderLayout.CENTER);
 
         pack();
 

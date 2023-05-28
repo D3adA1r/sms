@@ -7,10 +7,7 @@ import java.awt.event.ActionListener;
 public class AddButton extends JButton {
     protected JPanel panel;
     protected  BTSLogicLeft btsLogicLeft;
-
-
     public AddButton(JPanel panel) {
-        this.btsLogicLeft=btsLogicLeft;
         this.setText("Add");
         this.setPreferredSize(new Dimension(200, 50));
         this.panel = panel;
