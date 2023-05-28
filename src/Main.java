@@ -17,7 +17,7 @@ public class Main {
         centerPanel=new CenterPanel();
         scrollPane=new JScrollPane(leftPanel.panel);
         addButton=new AddButton(leftPanel.panel);
-
+        addButton.addActionListener(new AddButtonActionListener(leftPanel.panel,vbdLogicLinkedList));
         leftPanel.add(addButton);
     }
 
