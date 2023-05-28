@@ -18,7 +18,7 @@ public class BTSLogicLeft {
     public void codeVBD(VBDLogic vbdLogic){
         this.vbdLogic=vbdLogic;
         message= vbdLogic.message;
-        System.out.println(message);
+
 
     }
 }

@@ -12,6 +12,5 @@ public class AddButton extends JButton {
         this.setPreferredSize(new Dimension(200, 50));
         this.panel = panel;
 
-
     }
 }

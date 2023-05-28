@@ -28,8 +28,9 @@ public class AddButtonActionListener implements ActionListener {
         String message = JOptionPane.showInputDialog(this, "");
         if (message != null && !message.isEmpty()) {
             VBDLogic vbdLogic = new VBDLogic(message);
-            vbdLogic.setNumber();
+           // vbdLogic.setNumber();
             vbdLogicLinkedList.add(vbdLogic);
+            System.out.println(vbdLogicLinkedList.size());
 
             Thread thread = new Thread(new Runnable() {
                 @Override
@@ -44,6 +45,9 @@ public class AddButtonActionListener implements ActionListener {
             });
             thread.start();
         }
+    }
+    public LinkedList<VBDLogic> getVbdLogicLinkedList(){
+        return vbdLogicLinkedList;
     }
 }
 

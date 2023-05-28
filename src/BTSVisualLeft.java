@@ -12,12 +12,12 @@ public class BTSVisualLeft extends JPanel {
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
 
         //Number BTS
-        numberBTS=new JLabel("Number..");
+        numberBTS=new JLabel("Number: " + 0);
         numberBTS.setFont(new Font("NumerFont", Font.BOLD, 14));
 
 
         //iloscSMSDone
-        iloscSMSDone=new JLabel("SMSDONE...");
+        iloscSMSDone=new JLabel("SMSDONE: " + 0);
         iloscSMSDone.setFont(new Font("NumerFont", Font.BOLD, 14));
 
 

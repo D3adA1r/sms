@@ -12,6 +12,7 @@ public class VBDLogic {
         this.status = true;
         this.bandwidth = 0;
         this.number = 021;
+        setNumber();
     }
 
     public int getNumber() {
@@ -29,8 +30,10 @@ public class VBDLogic {
         number=(int)(Math.random()*1000);
     }
     public String toStringNumber(){
-        setNumber();
         return String.valueOf(number) ;
+    }
+    public String getMessage(){
+        return message;
     }
 
     public void stop() {

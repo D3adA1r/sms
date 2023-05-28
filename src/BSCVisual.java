@@ -13,19 +13,19 @@ public class BSCVisual extends JPanel {
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
 
         //Number BTS
-        numberBSC=new JLabel("Number..");
+        numberBSC=new JLabel("Number: " + logic.numberBSC);
         numberBSC.setFont(new Font("NumerFont", Font.BOLD, 14));
 
         //dodatPanelBSC
         dodatPanelBSC=new JPanel();
         dodatPanelBSC.setLayout(new BoxLayout(dodatPanelBSC,BoxLayout.Y_AXIS));
         //iloscSMSDone
-        iloscSMSDone=new JLabel("SMSDONE...");
+        iloscSMSDone=new JLabel("SMSDONE: " + 0);
         iloscSMSDone.setFont(new Font("NumerFont", Font.BOLD, 14));
 
 
         //iloscSMSWait
-        iloscSMSWait=new JLabel("SMSWait");
+        iloscSMSWait=new JLabel("SMSWait: " + 0);
         iloscSMSWait.setFont(new Font("NumerFont", Font.BOLD, 14));
 
         dodatPanelBSC.add(numberBSC);

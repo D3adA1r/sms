@@ -5,16 +5,19 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 public class RightPanel extends JPanel {
-    private JButton add;
-   private JScrollPane scrollPane;
-   private JPanel panel;
+    protected JButton add;
+   protected JScrollPane scrollPane;
+   protected JPanel panel;
+   protected LinkedList<VRDLogic> vrdLogicLinkedList;
 
 
     public RightPanel() {
 
         this.setLayout(new BorderLayout());
+        vrdLogicLinkedList=new LinkedList<>();
 
         //Dodanie JScrollPane
         panel=new JPanel();
@@ -33,6 +36,7 @@ public class RightPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 VRDLogic vrdLogic=new VRDLogic();
+                vrdLogicLinkedList.add(vrdLogic);
                 VRDVisual vrdVisual=new VRDVisual(vrdLogic);
                 Border border = BorderFactory.createLineBorder(Color.BLACK);
                 vrdVisual.setBorder(border);
@@ -48,5 +52,8 @@ public class RightPanel extends JPanel {
         this.setPreferredSize(new Dimension(200,600));
 
 
+    }
+    public LinkedList<VRDLogic> getVrdLogicLinkedList(){
+        return  vrdLogicLinkedList;
     }
 }

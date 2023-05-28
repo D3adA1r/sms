@@ -13,17 +13,17 @@ public class BTSVisualRight extends JPanel {
 
 
         //Number BTS
-        numberBTS=new JLabel("Number..");
+        numberBTS=new JLabel("Number: " + 0);
         numberBTS.setFont(new Font("NumerFont", Font.BOLD, 14));
 
 
         //iloscSMSDone
-        iloscSMSDone=new JLabel("SMSDONE...");
+        iloscSMSDone=new JLabel("SMSDONE: " + 0);
         iloscSMSDone.setFont(new Font("NumerFont", Font.BOLD, 14));
 
 
         //iloscSMSWait
-        iloscSMSWait=new JLabel("SMSWait");
+        iloscSMSWait=new JLabel("SMSWait:" + 0);
         iloscSMSWait.setFont(new Font("NumerFont", Font.BOLD, 14));
 
         this.add(numberBTS);
